@@ -26,6 +26,9 @@ git reset --hard bab6864
 ---------------------------------------------------
 		|  github  |
 ---------------------------------------------------
+Watch也就是关注该repo的动态
+star则类似于Facebook和Twitter上的”like
+fork就是将别人的项目拷贝一份给自己，new一个新的分支(Branch)出来，你push的改进和补充则又由原作者选择是否接受。
 当要push代码到git时，出现提示：
 	error:failed to push some refs to ...
 出现原因在于：git仓库中已经有一部分代码，所以它不允许你直接把你的代码覆盖上去
