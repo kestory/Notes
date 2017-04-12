@@ -1,0 +1,73 @@
+body 元素的内容会显示在浏览器中。
+
+title 元素的内容会显示在浏览器的标题栏中。
+
+元素
+用HTML标签表示，包含于尖括号中。
+<标签 属性1="值1" 属性2="值2">内容</标签>
+<h1 align="center">居中</h1>
+<a href="https://zh.wikipedia.org/">中文维基百科的链接！</a>
+
+换行<hr>水平线
+<!--这是一段注释。注释不会在浏览器中显示。—>
+<body bgcolor="yellow”>背景色
+<img src="w3school.jpg" width="104" height="142" />图像
+文本格式化
+<b>This text is bold</b>
+<strong>This text is strong</strong>
+<big>This text is big</big>
+<em>This text is emphasized</em>
+<i>This text is italic</i>
+<small>This text is small</small>
+This text contains
+<sub>subscript</sub>
+This text contains
+<sup>superscript</sup>
+This text is bold
+This text is strong
+This text is big
+This text is emphasized
+This text is italic
+This text is small
+This text contains subscript
+This text contains superscript
+<pre>预格式，适合显示代码
+hello<a href="http://www.baidu.com">123&lt;777&gt;321</a>
+123<777>321&it;&gt;是<>转义
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="UTF-8">
+          <title>kkk</title>
+     </head>
+     <body>
+<!-- 这是一个注释 -->
+<body bgcolor="">
+
+<h1>一级标题</h1>
+<h2>二级标题</h2>
+<h3>三级标题</h3>
+<h4>四级标题</h4>
+<h5>五级标题</h5>
+<h6>六级标题</h6>
+<p>这是
+一个
+使用换行符的
+段落</p>
+<hr>
+<a href="https://zh.wikipedia.org/">中文维基百科的链接！</a>
+<p>第一段</p><p>第二段</p><!-- 段就是上下换行空一行 -->
+<b>粗体</b><i>斜体</i><!-- 在代码里换行会空一格，空格只会空一格 -->
+<strong>加强文本</strong>
+<em>强调文本</em>
+<p>法语<span lang="fr">c'est la vie</span>在法国的应用很普遍，意为“这就是生活” 。<p>
+<abbr id="ID" class="术语" style="color:purple;" title="超文本标记语言">HTML</abbr>
+
+     </body>
+</html>
+在<html>和<body>之间，加上<head><meta charset="utf-8"></head>，告诉浏览器使用什么编码，解决了输出乱码
+''' fout = open('output.html','w')
+fout.write("<html>")
+fout.write('<head><meta charset="utf-8"></head>')#告诉浏览器使用什么编码，解决了输出乱码
+fout.write("<body>")'''
+
