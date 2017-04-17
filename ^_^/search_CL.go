@@ -27,4 +27,24 @@ related:返回与某个网站有关联的页面
 filetype:pdf
 site:www.zhihu.com
 
+You have designed the search engine, you know you should not ask her question.
+Think about how an answer would be phrased, and search that.
+
+Want:NYTimes articles about test scores in college, but not the SATs, written between 2008 and 2010.
+How:
+site:nytimes.com ~college "test scores" -SATs 2008..2010
+
+Want:A report on the different air speed velocities(速率) of common swallows.
+How:
+filetype:pdf air speed intitle:velocity of *swallow
+"Google Scholar"
+Want:Papers about photosynthesis(光合作用) by Dr. Ronald L. Green and Dr. Thomas P. Buttz.
+How:
+author:green photosynthesis
+"Others"
+define:happy
+1/7*(5-4)+8
+100pounds=?kg
+
+
 
