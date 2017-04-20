@@ -13,8 +13,7 @@ int main ()
   std::cout << "max_size: " << str.max_size() << "\n";
   return 0;
 }
-
-A possible output for this program could be:
+--------------------------------------
 size: 11
 length: 11
 capacity: 15
