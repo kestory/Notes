@@ -16,7 +16,7 @@ q.front()	返回队首元素的值，但不删除该元素
 q.push()	在队尾压入新元素
 q.back()	返回队列尾元素的值，但不删除该元素
 
-电话号码要输字符串时
+对I/O重载
 #include <iostream>
 #include <stack>
 using namespace std;
