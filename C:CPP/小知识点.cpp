@@ -3,6 +3,13 @@
 	cout<<INT_MIN<<endl;
 2147483647
 -2147483648
+#include <float.h>
+	cout<<DBL_MAX<<endl;
+	cout<<numeric_limits<double>::max()<<endl;
+	cout<<DBL_MIN<<endl;
+1.79769e+308
+1.79769e+308
+2.22507e-308
 
 #include <cmath>     /* fabs&&abs */
 	double x,y;

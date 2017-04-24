@@ -2,6 +2,7 @@
 #define dprint(expr) printf(#expr "= %d\n",expr)
 #define D(x) cout<<#x<<"="<<x<<endl;
 #define exchange(a,b)     (a=a^b,b=a^b,a=a^b)
+ios::sync_with_stdio(false);
 ~~~~~~~~~~~~~~~~~~~~~~~~~去除字符串中空格~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #include <iostream>
 #include <cstring>

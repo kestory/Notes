@@ -34,3 +34,28 @@
 34. F9: 显示和关闭 Nautilus 边栏
 */
 https://linux.cn/article-3025-1.html?utm_source=search&utm_medium=sitemap
+
+终端常用的快捷键：
+ctrl+shift+c: 复制
+ctrl+shift+v: 粘贴
+
+Ctrl + d        删除一个字符（相当于 Delete）（当命令行无字符时，退出终端）
+Ctrl + h        退格删除一个字符（相当于 Backspace）
+Alt  + d         向右删一个单词
+Ctrl + w        向左删一个单词
+
+Ctrl + u        删除光标之前到行首的字符
+Ctrl + k        删除光标之前到行尾的字符
+Ctrl + c        取消当前行输入的命令
+
+Ctrl + a        光标移动到行首（Ahead of line）
+Ctrl + e        光标移动到行尾（End of line）
+
+
+//Alt  + f        光标向前（Forward）移动一个单词
+//Alt  + b        光标往回（Backward）移动一个单词
+
+Ctrl + l        清屏（相当于 clear 命令）
+
+Ctrl + r        显示：号提示，根据用户输入查找相关历史命令（reverse-i-search）
+Alt  + .         粘帖最后一次命令最后的参数（通常用于mkdir xx 后, cd配合着alt+.）
