@@ -3,3 +3,5 @@
 而恰恰这时屋漏偏逢连夜雨，更新命令也不能正常工作，出现大量“Failed to fetch”的错误。
 设置妥当DNS服务器即可
 sudo vi /etc/resolv.conf
+//add the line
+nameserver 8.8.8.8
