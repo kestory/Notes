@@ -48,7 +48,7 @@ IntSet operator +(const IntSet& iset)const;
 
 这里函数返回值为IntSet，所以可以赋值，即a + b可以赋值给c
 ---------------------------------------------------------------------------------------------- -
-new / delete 动态开辟二维数组
+new / delete 动态开辟二维数组//m,n先输入m行n列
 int **p = new int*[m]; //开辟行
 for (int i = 0; i < m; i++)
 	p[i] = new int[n]; //开辟列
