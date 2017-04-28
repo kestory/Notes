@@ -1,4 +1,5 @@
 /构造函数调用顺序:基类->成员对象->本身/
+http://blog.csdn.net/gaoyingju/article/details/8790233
 #include <iostream>
 using namespace std;
 class A{

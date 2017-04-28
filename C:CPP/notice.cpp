@@ -13,7 +13,7 @@ a = b = c = 1;
 #include <malloc.h> // 增加引用这个头文件
         //........
 for (i = 0; i < 6; i++) {// 为a[0]~a[5] 分配空间
-	a[i] = (char *) malloc(sizeof(char) * 100);
+    a[i] = (char *) malloc(sizeof(char) * 100);
 }
 
 3.int number()
@@ -40,3 +40,4 @@ for (i = 0; i < 6; i++) {// 为a[0]~a[5] 分配空间
              [ ][ ]前要是数组
 
              9.class 中直接写函数哪怕只有一行也要 {}
+             10.for里面新定义的变量在外面也是不能用的
