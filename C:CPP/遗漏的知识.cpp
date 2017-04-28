@@ -63,10 +63,10 @@ STL中的 vector 动态开辟二维数组
 vector<vector<int> > p(m, vector<int>(n));
 ---------------------------------------------------------------------------------------------- -
 struct 的初始化
-struct Interval {
-	int start;
-	int end;
-	Interval() : start(0), end(0) {}
-	Interval(int s, int e) : start(s), end(e) {}
-};
+	struct Interval {
+		int start;
+		int end;
+		Interval(): start(0), end(0) {}
+		Interval(int s, int e): start(s), end(e) {}
+	};
 ---------------------------------------------------------------------------------------------- -
