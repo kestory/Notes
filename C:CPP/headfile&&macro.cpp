@@ -3,14 +3,14 @@
  <stdlib.h>
 EXIT_FAILURE	1
 EXIT_SUCCESS	0
-This macro expands to a system-dependent integral expression that, 
-when used as the argument for function exit, 
+This macro expands to a system-dependent integral expression that,
+when used as the argument for function exit,
 signifies that the application was successful.
 The opposite meaning can be specified with EXIT_FAILURE.
 */
 #include <stdio.h>
 #include <stdlib.h>
- 
+
 int main(void)
 {
 	FILE *fp = fopen("data.txt","r");
@@ -19,11 +19,11 @@ int main(void)
 	   fprintf(stderr,"fopen() failed in file %s at line # %d", __FILE__,__LINE__);
 	   exit(EXIT_FAILURE);
 	}
- 
-	/* 正常进程持续至此。 */
+
+	/* 正常进程持续至此*/
 	fclose(fp);
 	printf("Normal Return\n");
- 
+
 	return EXIT_SUCCESS;
 }
 ---------------------------------------------------------------------------------------------------------
@@ -31,12 +31,6 @@ fopen() failed in file Untitled.cpp at line # 9
 OR
 Normal Return
 ---------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
 / / / / / / / __FILE__ &&__LINE__&&sizeof / / / / / / /
 /*
 __LINE__：在源代码中插入当前源代码行号；
@@ -100,20 +94,3 @@ The size of double 8
 The size of long double 16
 The size of char 1
 ---------------------------------------------------------------------------------------------------------
-
-
-
-
-
-/**/
-
-
-
-
-
-
-
-
-
-
-
