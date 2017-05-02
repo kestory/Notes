@@ -1,4 +1,6 @@
-点击选中一个包，点击右键选择Follow--TCP Stream，可查看包的详细内容
+Packet List&&Packet Details&&Packet Bytes
+点击选中一个包，右键选择Follow(追踪流)--TCP Stream，可查看包的详细内容
+点击任意协议，右键Wiki Protocol Page(wiki 协议界面)可以查看该协议页面
 
 IP过滤（如：ip.addr == x.x.x.x，ip.src == x.x.x.x, ip.dst == x.x.x.x）
 协议过滤（如：HTTP、HTTPS、SMTP、ARP等）
