@@ -1,4 +1,5 @@
 Packet List&&Packet Details&&Packet Bytes
+在展开的数据包中选中后右击可以添加到列
 点击选中一个包，右键选择Follow(追踪流)--TCP Stream，可查看包的详细内容
 点击任意协议，右键Wiki Protocol Page(wiki 协议界面)可以查看该协议页面
 
