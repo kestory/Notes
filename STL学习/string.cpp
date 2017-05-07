@@ -1,11 +1,11 @@
 https://www.renfei.org/blog/introduction-to-cpp-string.html
 str.size() and str.length() are just synonyms.
-size() is there to be consistent with other STL containers (like vector, map, etc.),
-     length() is there to make things more readable.
+size() is there to be consistent with other STL containers (like vector, map, etc.)
+length() is there to make things more readable.
 // comparing size, length, capacity and max_size
 #include <iostream>
 #include <string>
-     int main ()
+int main ()
 {
 	std::string str ("Test string");
 	std::cout << "size: " << str.size() << "\n";
