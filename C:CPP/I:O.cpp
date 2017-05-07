@@ -2,3 +2,5 @@
 #include <iomanip>
 cout<<setiosflags(ios::fixed)<<setprecision(2)<<the_number<<endl;
 printf("%.2f\n",the_number);
+
+endl(cout);//==cout<<endl; // endl called as a regular function
