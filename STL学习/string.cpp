@@ -20,13 +20,17 @@ length: 11
 capacity: 15
 max_size: 4294967291
 
-
+--------------------------------------
 str.empty();//检查 str 是否为空，为空返回 1，否则返回 0
 str[n];
 
-string_2_int~~~~~~~
+--------------------------------------
+-------string_to_int
 string s = "123";
 int i = stoi(s);
-int_2_string~~~~~~~
+-------int_to_string
 int a;
 string s = to_string(a);
+-------string_to_char*
+char * cstr = new char [str.length()+1];
+--------------------------------------
