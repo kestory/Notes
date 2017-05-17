@@ -19,11 +19,6 @@ size: 11
 length: 11
 capacity: 15
 max_size: 4294967291
-
---------------------------------------
-str.empty();//检查 str 是否为空，为空返回 1，否则返回 0
-str[n];
-
 --------------------------------------
 -------string_to_int
 string s = "123";
@@ -34,3 +29,8 @@ string s = to_string(a);
 -------string_to_char*
 char * cstr = new char [str.length()+1];
 --------------------------------------
+str.empty();//检查 str 是否为空，为空返回 1，否则返回 0
+str[n];
+int pos1 = str.find_first_of('w');
+int pos2 = strchr(str.c_str(), 'w') - str.c_str();//strchr返回地址，两地址相减就是第几个
+
