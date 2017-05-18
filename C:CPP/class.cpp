@@ -23,4 +23,36 @@ int main(int argc, char const *argv[]) {
 A
 C
 B
+--------------------------------------------------------------------------------------------------
+/ a missing vtable usually means the first non-inline virtual member function has no definition /
+#include <iostream>
+using namespace std;
+class Parent {
+public:
+	virtual int func () = 0;
+	~Parent(){};//without {} will have "Undefined symbols for architecture x86_64:"
+};
+class Child: public Parent {
+public:
+
+	int data;
+	Child (int k) {data = k;}
+	int func() {   // virtual function
+		cout << "Returning square of 10\n";
+		return 10 * 10;
+	}
+	void Display () {cout << data << "\n";}
+	~Child() {cout << "Overridden Parents Destructor \n";}
+};
+int main() {
+	Child a(10);
+	a.Display();
+	a.func();
+	a.Display();
+}
+$ ./main
+10
+Returning square of 10
+10
+Overridden Parents Destructor
 

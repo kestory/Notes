@@ -31,6 +31,6 @@ char * cstr = new char [str.length()+1];
 --------------------------------------
 str.empty();//检查 str 是否为空，为空返回 1，否则返回 0
 str[n];
-int pos1 = str.find_first_of('w');
+int pos1 = str.find_first_of('w');//==v
 int pos2 = strchr(str.c_str(), 'w') - str.c_str();//strchr返回地址，两地址相减就是第几个
 
