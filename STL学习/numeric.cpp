@@ -1,5 +1,9 @@
 #include <numeric>
+
 三种方式用accumulate计算自定义结构类型
+double operator () (double base, const Student &stu) {
+	return base + stu.age;
+}
 double sum0 = accumulate(it1, it2, 0.0, Student());//重载了()
 double sum1 = accumulate(it1, it2, 0.0, [](int sum, Student &x) { return sum + x.age;});
 double sum2 = 0;
