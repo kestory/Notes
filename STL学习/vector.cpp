@@ -10,8 +10,6 @@ vector<int> a(n, n + 5);            //将数组n的前5个元素作为向量a的
 vector<int> a(&n[1], &n[4]);        //将n[1] - n[4]范围内的元素作为向量a的初值
 
 
-
-
 int max = *max_element(v.begin(), v.end());
 
 /
@@ -53,9 +51,3 @@ myints.size()=20
 myints.size()=19
 0 1 2 3 4 5 6 7 8 9 100 100 100 100 100 100 100 100 100
 -----------------------------------
-三种方式用accumulate计算自定义结构类型
-double average_age0 = accumulate(it1, it2, 0.0, Student()) / students.size(); //重载了()
-double average_age1 = accumulate(it1, it2, 0.0, [](int sum, Student &x) { return sum + x.age;}) / students.size();
-double age_sum = 0;
-for_each(it1, it2, [&](Student &x) {age_sum += x.age;}); //donot forget:& {} ;
-double average_age2 = age_sum / students.size();
