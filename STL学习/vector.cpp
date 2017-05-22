@@ -13,3 +13,29 @@ a.size();//the number of elements, which is the number of actual objects held in
 
 
 int max = *max_element(v.begin(), v.end());
+
+// vector::size
+#include <iostream>
+#include <vector>
+#define D(x) cout<<#x<<"="<<x<<"\t";
+using namespace std;
+int main ()
+{
+    vector<int> myints;
+    cout << "0. size: " << myints.size() << '\n';
+    for_each(myints.begin(),myints.end(),[](int x){D(x)});
+
+    for (int i=0; i<10; i++) myints.push_back(i);
+    cout << "\n1. size: " << myints.size() << '\n';
+    for_each(myints.begin(),myints.end(),[](int x){D(x)});
+
+    myints.insert (myints.end(),10,100);
+    cout << "\n2. size: " << myints.size() << '\n';
+    for_each(myints.begin(),myints.end(),[](int x){D(x)});
+
+    myints.pop_back();
+    cout << "\n3. size: " << myints.size() << '\n';
+    for_each(myints.begin(),myints.end(),[](int x){D(x)});
+
+    return 0;
+}
