@@ -21,24 +21,35 @@ lambda
 /
 #include <iostream>
 #include <vector>
+#define D(x) cout<<endl<<#x<<"="<<x<<endl;
 using namespace std;
 int main ()
 {
 	vector<int> myints;
-	cout << "0. size: " << myints.size() << '\n';
-	for_each(myints.begin(), myints.end(), [](int x) {cout << x << '\t';});
+	D(myints.size())
+	for_each(myints.begin(), myints.end(), [](int x) {cout << x << ' ';});
 
 	for (int i = 0; i < 10; i++) myints.push_back(i);
-	cout << "\n1. size: " << myints.size() << '\n';
-	for_each(myints.begin(), myints.end(), [](int x) {cout << x << '\t';});
+	D(myints.size())
+	for_each(myints.begin(), myints.end(), [](int x) {cout << x << ' ';});
 
 	myints.insert (myints.end(), 10, 100);
-	cout << "\n2. size: " << myints.size() << '\n';
-	for_each(myints.begin(), myints.end(), [](int x) {cout << x << '\t';});
+	D(myints.size())
+	for_each(myints.begin(), myints.end(), [](int x) {cout << x << ' ';});
 
 	myints.pop_back();
-	cout << "\n3. size: " << myints.size() << '\n';
-	for_each(myints.begin(), myints.end(), [](int x) {cout << x << '\t';});
+	D(myints.size())
+	for_each(myints.begin(), myints.end(), [](int x) {cout << x << ' ';});
 
 	return 0;
 }
+-----------------------------------
+myints.size()=0
+
+myints.size()=10
+0 1 2 3 4 5 6 7 8 9
+myints.size()=20
+0 1 2 3 4 5 6 7 8 9 100 100 100 100 100 100 100 100 100 100
+myints.size()=19
+0 1 2 3 4 5 6 7 8 9 100 100 100 100 100 100 100 100 100
+-----------------------------------
