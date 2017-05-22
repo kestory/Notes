@@ -53,3 +53,9 @@ myints.size()=20
 myints.size()=19
 0 1 2 3 4 5 6 7 8 9 100 100 100 100 100 100 100 100 100
 -----------------------------------
+三种方式用accumulate计算自定义结构类型
+double average_age0 = accumulate(it1, it2, 0.0, Student()) / students.size(); //重载了()
+double average_age1 = accumulate(it1, it2, 0.0, [](int sum, Student &x) { return sum + x.age;}) / students.size();
+double age_sum = 0;
+for_each(it1, it2, [&](Student &x) {age_sum += x.age;}); //donot forget:& {} ;
+double average_age2 = age_sum / students.size();
