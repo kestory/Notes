@@ -28,6 +28,7 @@ int a;
 string s = to_string(a);
 -------string_to_char*
 char * cstr = new char [str.length()+1];
+strcpy (cstr, str.c_str());
 --------------------------------------
 str.empty();//检查 str 是否为空，为空返回 1，否则返回 0
 str[n];
