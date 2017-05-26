@@ -17,6 +17,9 @@ myvector.pop_back();//Parameters & Return value are both none
 myvector.size();//the number of elements, which is the number of actual objects held in the vector
 myvector.capacity();//The size of the currently allocated storage capacity in the vector
 myvector.insert(iterator position, size_type n, const value_type& val);
+myvector.max_size()//a pretty large number
+
+
 
 ------------Lambda-------------
 #include <iostream>
