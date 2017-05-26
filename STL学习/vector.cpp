@@ -51,3 +51,31 @@ myints.size()=20
 myints.size()=19
 0 1 2 3 4 5 6 7 8 9 100 100 100 100 100 100 100 100 100
 -----------------------------------
+
+
+
+
+/
+
+
+/
+#include <iostream>
+#include <vector>
+#define D(x) cout<<#x<<"="<<x<<endl;
+using namespace std;
+int main(int argc, char *argv[]) {
+	vector <int> vecInt;
+	for (int i = 0; i < 500; i++)
+		vecInt.push_back(i);
+	D(vecInt.capacity())	//j=512
+	D(vecInt.size())		//i=500
+	vecInt.clear();
+	D(vecInt.capacity())	//j=512
+	D(vecInt.size())		//i=0
+	vecInt.push_back(123);
+	D(vecInt.capacity())	//j=512
+	D(vecInt.size())		//i=1
+	vector <int>().swap(vecInt);  //清除容器并最小化它的容量，
+	D(vecInt.capacity())	//j=0
+	D(vecInt.size())		//i=0
+}
