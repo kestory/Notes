@@ -60,7 +60,7 @@ myints.size()=19
 
 /
 capacity() VS size()
-clear() VS swap()
+clear() VS swap()//vector<T>().swap(x);
 /
 #include <iostream>
 #include <vector>
