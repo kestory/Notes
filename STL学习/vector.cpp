@@ -19,6 +19,8 @@ myvector.capacity();//The size of the currently allocated storage capacity in th
 myvector.insert(iterator position, size_type n, const value_type& val);
 myvector.max_size()//a pretty large number
 
+for (unsigned i = 0; i < myvector.size(); i++)
+	cout << ' ' << myvector[i];
 
 
 ------------Lambda-------------
