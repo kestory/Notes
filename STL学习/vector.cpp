@@ -67,14 +67,17 @@ int main(int argc, char *argv[]) {
 	vector <int> vecInt;
 	for (int i = 0; i < 500; i++)
 		vecInt.push_back(i);
-	D(vecInt.capacity())	//j=512
+	D(vecInt.capacity())	//j=512，开辟的空间，2的幂
 	D(vecInt.size())		//i=500
+
 	vecInt.clear();
 	D(vecInt.capacity())	//j=512
 	D(vecInt.size())		//i=0
+
 	vecInt.push_back(123);
 	D(vecInt.capacity())	//j=512
 	D(vecInt.size())		//i=1
+
 	vector <int>().swap(vecInt);  //清除容器并最小化它的容量，
 	D(vecInt.capacity())	//j=0
 	D(vecInt.size())		//i=0
