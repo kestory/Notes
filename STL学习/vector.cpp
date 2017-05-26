@@ -10,18 +10,15 @@ int n[] = {1, 2, 3, 4, 5};
 vector<int> a(n, n + 5);           		//将数组n的前5个元素作为向量a的初值
 vector<int> a(&n[1], &n[4]);		//将n[1] - n[4]范围内的元素作为向量a的初值
 
-
-
-
 int max = *max_element(v.begin(), v.end());
 
-/
 myvector.push_back (myint);//Adds a new element at the end of the vector
 myvector.pop_back();//Parameters & Return value are both none
-myvector.size();//the number of elements, which is the number of actual objects held in the vector, not necessarily equal to its storage capacity
+myvector.size();//the number of elements, which is the number of actual objects held in the vector
+myvector.capacity();//The size of the currently allocated storage capacity in the vector
 myvector.insert(iterator position, size_type n, const value_type& val);
-Lambda
-/
+
+------------Lambda-------------
 #include <iostream>
 #include <vector>
 #define D(x) cout<<endl<<#x<<"="<<x<<endl;
@@ -58,11 +55,9 @@ myints.size()=19
 -----------------------------------
 
 
-
-
 /
-
-
+capacity() VS size()
+clear() VS swap()
 /
 #include <iostream>
 #include <vector>
