@@ -61,7 +61,7 @@ int main()
 int system(char *command);//这里就是调用windows的DOS命令，和在CMD里面使用一样
 system("pause")可以实现冻结屏幕，便于观察程序的执行结果
 system("CLS")可以实现清屏操作//windows不管大小写的呀
-system()调用color命令
+~~system()调用color命令~~
 COLOR [attr]//attr - 颜色属性，由两个十六进制数字指定 -- 第一个为背景，第二个则为前景
 每个数字可以为以下任何值之一，大小写无所谓，若前景和背景颜色相同，和不设置一样
 0 = 黑	 	8 = 灰色
@@ -72,9 +72,9 @@ COLOR [attr]//attr - 颜色属性，由两个十六进制数字指定 -- 第一�
 5 = 紫色	D = 淡紫色
 6 = 黄色	E = 淡黄色
 7 = 白色	F = 亮白色
-system("color fc");//在亮白色上产生亮红色
+system("color 0b");//黑底浅绿
 这里都是全局变色，且只看最后一个system("color **");
-想要一行还得
+~~想要一行还得~~
 #include <windows.h>
 #include <stdio.h>
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
