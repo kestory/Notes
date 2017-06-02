@@ -107,8 +107,8 @@ int numbers = 1234;
 sprintf(str, "%d", numbers);
 ~~~~~~~~~~~~~~~~~~~~~~~~~~atoi()~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #include <cstdlib>
-char str[255] = "4321";
-int numbers = atoi(str);
+char str[255] = "-4321.123";
+int numbers = atoi(str);//numbers ==4321
 ~~~~~~~~~~~~~~~~~~~~~~~~~~quickSort()~~~~~~~~~~~~~~~~~~~~~~~~~
 / takes the first element as pivot
 
