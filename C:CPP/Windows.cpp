@@ -30,6 +30,25 @@ int main()
 {
 	HANDLE hwnd = GetStdHandle(STD_OUTPUT_HANDLE);//实例化句柄hwnd
 	SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN);//API设置控制台窗口字体颜色和背景色的函数 ,设置字体颜色为绿色
-	printf("hello world!\n");
+	printf("hello world!\n");//仍黑底，仅字绿
 	return 0;
 }
+=======
+#include <windows.h>//GetStdHandle && SetConsoleTextAttribute
+#include <iostream>
+using namespace std;
+void SetColor(unsigned short ForeColor = 3, unsigned short BackGroundColor = 0) //给参数默认值，使之可以接受0/1/2个参数
+{
+	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+	SetConsoleTextAttribute(hCon, ForeColor | BackGroundColor);
+}
+int main()
+{
+	SetColor();
+	std::cout << "Hello world!" << endl;
+	SetColor(40, 30);//之后都是绿低黄字
+	std::cout << "Hello world!" << endl;
+	std::cout << "Hello world!" << endl;
+	return 0;
+}
+
