@@ -57,4 +57,10 @@ int main()
 	std::cout << "Hello world!" << endl;
 	return 0;
 }
-
+=======windows操作系统下system()函数=======
+system - execute a shell command//这里就是和在windows的CMD里面使用这些命令一样
+system("pause")可以实现冻结屏幕，便于观察程序的执行结果
+system("CLS")可以实现清屏操作//windows不管大小写的呀。。
+system()调用color命令
+COLOR [attr]
+system("color fc");//在亮白色上产生亮红色
