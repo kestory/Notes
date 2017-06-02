@@ -10,3 +10,12 @@ COORD pos;
 
 typedef void *HANDLE;//HANDLE == void*
 
+#include <stdio.h>
+#include <windows.h>
+int main(void)
+{
+	HANDLE hwnd = GetStdHandle(STD_OUTPUT_HANDLE);//实例化句柄hwnd
+	SetConsoleTextAttribute(hwnd, FOREGROUND_GREEN);//API设置控制台窗口字体颜色和背景色的函数 ,设置字体颜色为绿色
+	printf("hello world!\n");
+	return 0;
+}
