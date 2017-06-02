@@ -22,6 +22,12 @@ nStdHandle	The standard device. This parameter can be one of the following value
 	STD_OUTPUT_HANDLE	//标准输出的句柄
 	STD_ERROR_HANDLE	//标准错误的句柄
 
+-------DWORD-------
+DWORD 双字即为4个字节，每个字节是8位，共32位
+//A DWORD is a 32-bit unsigned integer (range: 0 through 4294967295 decimal).
+typedef unsigned long DWORD, *PDWORD, *LPDWORD;
+
+
 
 == 彩色的Hello World! ==
 #include <stdio.h>
@@ -39,7 +45,7 @@ int main()
 using namespace std;
 void SetColor(unsigned short ForeColor = 3, unsigned short BackGroundColor = 0) //给参数默认值，使之可以接受0/1/2个参数
 {
-	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);
+	HANDLE hCon = GetStdHandle(STD_OUTPUT_HANDLE);//得到控制台输出设备的句柄
 	SetConsoleTextAttribute(hCon, ForeColor | BackGroundColor);
 }
 int main()
