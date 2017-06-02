@@ -58,9 +58,26 @@ int main()
 	return 0;
 }
 =======windows操作系统下system()函数=======
-system - execute a shell command//这里就是和在windows的CMD里面使用这些命令一样
+int system(char *command);//这里就是调用windows的DOS命令，和在CMD里面使用一样
 system("pause")可以实现冻结屏幕，便于观察程序的执行结果
-system("CLS")可以实现清屏操作//windows不管大小写的呀。。
+system("CLS")可以实现清屏操作//windows不管大小写的呀
 system()调用color命令
-COLOR [attr]
+COLOR [attr]//attr - 颜色属性，由两个十六进制数字指定 -- 第一个为背景，第二个则为前景
+每个数字可以为以下任何值之一，大小写无所谓，若前景和背景颜色相同，和不设置一样
+0 = 黑	 	8 = 灰色
+1 = 蓝色	9 = 淡蓝色
+2 = 绿色	A = 淡绿色
+3 = 浅绿色 	B = 淡浅绿色
+4 = 红色	C = 淡红色
+5 = 紫色	D = 淡紫色
+6 = 黄色	E = 淡黄色
+7 = 白色	F = 亮白色
 system("color fc");//在亮白色上产生亮红色
+这里都是全局变色，且只看最后一个system("color **");
+想要一行还得
+#include <windows.h>
+#include <stdio.h>
+HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+SetConsoleTextAttribute(hConsole, 4);
+cout << "这行是红的，下面变回白色，不过前提全是黑色背景";
+SetConsoleTextAttribute(hConsole, 7);
