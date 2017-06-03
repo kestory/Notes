@@ -90,8 +90,7 @@ myst st = {
 	}
 };
 ========使用{}进行初始化，C标准的用法，可移植性好
-myst st;
-st = { 1 ,2, {4}};
+myst st = { 1 ,2, {4}};
 ========使用庫函数初始化
 memset(&st, 0, sizeof (st));
 bzero(&set, sizeof (st));
