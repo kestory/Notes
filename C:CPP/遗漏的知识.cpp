@@ -76,10 +76,13 @@ struct mych {
 struct myst {
 	int i;
 	int j;
+	int x;
 	struct mych ch;
 };
-========在成员前面加上"." 这种方式比较直观，但是属于gcc扩展
-struct myst st = {
+========省略的字段被初始化0
+//Omitted field members are implicitly initialized the same as objects that have static storage duration.
+//works in C99
+myst st = {
 	.i = 1,
 	.j = 2,
 	.ch = {
@@ -87,7 +90,8 @@ struct myst st = {
 	}
 };
 ========使用{}进行初始化，C标准的用法，可移植性好
-struct myst st = { 1 ,2, {4}};
+myst st;
+st = { 1 ,2, {4}};
 ========使用庫函数初始化
 memset(&st, 0, sizeof (st));
 bzero(&set, sizeof (st));
