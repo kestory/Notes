@@ -61,4 +61,11 @@ git remote rename hi hello
 以后git push <name> master推送最新修改
 
 
-
+---------------------------------------------------
+		简易方式
+---------------------------------------------------
+在Github创建好仓库
+git clone https://github.com/kestory/PlaneGame.git
+然后把文件添加进去
+第一次 git push 需要账号密码
+之后 git add .｜git status ｜git commit -m "balabala"｜git push 即可
