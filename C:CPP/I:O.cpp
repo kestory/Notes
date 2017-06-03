@@ -5,3 +5,5 @@ printf("%.2f\n",the_number);
 
 endl(cout);//== cout<<endl; // endl called as a regular function
 fflush(stdout);//强制刷新缓存，输出显示
+
+

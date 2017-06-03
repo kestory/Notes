@@ -99,3 +99,10 @@ int main()
 	std::cout << "Hello world!" << endl;
 	return 0;
 }
+=======
+#include <windows.h>
+void Sleep(DWORD dwMilliseconds);  参数为毫秒
+-------^ win | unix v-------sleep函数
+#include <unistd.h>
+unsigned int sleep(unsigned int seconds);参数为毫秒 （如果需要更精确可以用usleep，单位为微秒）
+=======
