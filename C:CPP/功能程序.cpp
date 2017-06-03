@@ -149,4 +149,10 @@ void quickSort(int arr[], int left, int right) {
 	if (left < j)	quickSort(arr, left, j);
 	if (i < right)	quickSort(arr, i, right);
 }
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~rand()~~~~~~~~~~~~~~~~~~~~~~~~~
+k = a + rand() % (b - a + 1); //[a,b]
+//(rand() % (b - a)) + a; //[a,b)
+//(rand() % (b - a)) + a + 1; //(a,b]
+0~1之间的小数
+rand() / double(RAND_MAX)//即使用了时间种子，每次第一个都很接近
+srand((unsigned)time(NULL));

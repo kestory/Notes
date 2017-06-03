@@ -62,11 +62,34 @@ STL中的 vector 动态开辟二维数组
 //注意这一行：vector <int后两个 "> "之间要有空格！否则会被认为是重载 "> > "。
 vector<vector<int> > p(m, vector<int>(n));
 ---------------------------------------------------------------------------------------------- -
-struct 的初始化
+struct 的初始化;
 struct Interval {
 	int start;
 	int end;
 	Interval(): start(0), end(0) {}
 	Interval(int s, int e): start(s), end(e) {}
 };
+struct mych {
+	int k;
+};
+
+struct myst {
+	int i;
+	int j;
+	struct mych ch;
+};
+========在成员前面加上"." 这种方式比较直观，但是属于gcc扩展
+struct myst st = {
+	.i = 1,
+	.j = 2,
+	.ch = {
+		.k = 3
+	}
+};
+========使用{}进行初始化，C标准的用法，可移植性好
+struct myst st = { 1 ,2, {4}};
+========使用庫函数初始化
+memset(&st, 0, sizeof (st));
+bzero(&set, sizeof (st));
 ---------------------------------------------------------------------------------------------- -
+
