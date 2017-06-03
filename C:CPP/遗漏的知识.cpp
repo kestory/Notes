@@ -41,7 +41,7 @@ using namespace std;
 cout << typeid(d).name() << endl;
 ---------------------------------------------------------------------------------------------- -
 IntSet operator +(const IntSet& iset)const;
-第一个const保证 iset不会被改变同时&保证效率高
+第一个const保证 iset不会被改变，同时 & 保证效率高
 第二个const说明这是“常成员函数”，只用来获取对象的状态，在函数体里面不能改变数据对象的值，就是本来的this指向的对象不能变
 比如 InSet c = a + b;
 第一个const保证b不变，第二个const保证a不变
@@ -63,10 +63,10 @@ STL中的 vector 动态开辟二维数组
 vector<vector<int> > p(m, vector<int>(n));
 ---------------------------------------------------------------------------------------------- -
 struct 的初始化
-	struct Interval {
-		int start;
-		int end;
-		Interval(): start(0), end(0) {}
-		Interval(int s, int e): start(s), end(e) {}
-	};
+struct Interval {
+	int start;
+	int end;
+	Interval(): start(0), end(0) {}
+	Interval(int s, int e): start(s), end(e) {}
+};
 ---------------------------------------------------------------------------------------------- -
