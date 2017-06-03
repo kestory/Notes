@@ -57,7 +57,17 @@ SetConsoleTextAttribute(hConsole, 7);
 
 -------SetConsoleTextAttribute 函数-------
 BOOL SetConsoleTextAttribute( HANDLE hConsoleOutput,WORD wAttributes);
-
+一共有16种文字颜色，16种背景颜色，可以通过
+文字颜色 + 背景颜色 * 0x10 来设置控制台的颜色
+wAttributes			颜色		对应的值
+FOREGROUND_BLUE		字体颜色：蓝	1
+FOREGROUND_GREEN		字体颜色：绿	2
+FOREGROUND_RED		字体颜色：红	4
+FOREGROUND_INTENSITY	前景色高亮显示	8
+BACKGROUND_BLUE		背景颜色：蓝	16
+BACKGROUND_GREEN		背景颜色：绿	32
+BACKGROUND_RED		背景颜色：红	64
+BACKGROUND_INTENSITY	背景色高亮显示	128
 
 == 彩色的Hello World! ==
 #include <stdio.h>
