@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "tiny changes"
+	git commit -m "AutoGit.sh"
 	git push
