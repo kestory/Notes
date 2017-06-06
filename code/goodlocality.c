@@ -11,7 +11,7 @@ int main () {
 	printf("%d count computing over!\n", i * j * k);
 }
 /*
-/usr/bin/time ./goodlocality
+/usr/bin/time [-pl] ./goodlocality
 time ./goodlocality
 
 abc
