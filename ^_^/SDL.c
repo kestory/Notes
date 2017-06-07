@@ -20,4 +20,5 @@ $ echo g++ sdlExample.cpp `sdl-config --cflags --libs` -o sdlExample
 ====================================
 
 
-
+C语言探索之旅：SDL开发游戏之安装SDL
+http://www.toutiao.com/a4450957327/
