@@ -3,7 +3,13 @@ Homebrew
 安装软件：brew install 软件名，如brew install wget
 卸载软件：brew remove 软件名，如brew remove wget
 查看信息：brew info 软件名，如brew info wget
-
+brew list   —列出已安装的软件
+brew update	更新Homebrew
+brew home *	用浏览器打开
+brew info *	显示软件信息
+brew deps *	显示包依赖
+brew server *	启动web服务器，可以通过浏览器访问http://localhost:4567/ 来同网页来管理包
+brew -h 	帮助
 
 "MacTips"
 调整 Launchpad 布局
