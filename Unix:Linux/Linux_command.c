@@ -6,6 +6,9 @@ uname -r 命令查看当前的内核版本
 df -ah	//-a 显示目录和文件 -h "Human-readable" output BKMGT
 source ~/.zshrc相当于重启终端，就是把新配置读入
 
+$ find . -name "._*"|xargs rm
+把"._"开头的文件删除/可以直接使用 dot_clean 命令
+
 $ echo | gcc -E -xc -include 'stddef.h' - | grep size_t
 typedef long unsigned int size_t;
 
