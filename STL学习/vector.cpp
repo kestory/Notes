@@ -21,7 +21,7 @@ myvector.max_size()//A pretty large number
 myvector.empty()//whether the vector is empty
 
 
-for (unsigned i = 0; i < myvector.size(); i++)
+for (int i = 0; i < myvector.size(); i++)
 	cout << ' ' << myvector[i];
 for(vector<T>::iterator it=myvector.begin();it!=myvector.end();it++)
 	cout<<*it<<" ";
@@ -41,7 +41,7 @@ int main ()
 	D(myints.size())
 	for_each(myints.begin(), myints.end(), [](int x) {cout << x << ' ';});
 
-	myints.insert (myints.end(), 10, 100);
+	myints.insert(myints.end(), 10, 100);
 	D(myints.size())
 	for_each(myints.begin(), myints.end(), [](int x) {cout << x << ' ';});
 
@@ -62,11 +62,11 @@ myints.size()=19
 0 1 2 3 4 5 6 7 8 9 100 100 100 100 100 100 100 100 100
 -----------------------------------
 
-
-/
+>>>>>>>
 capacity() VS size()
 clear() VS swap()//vector<T>().swap(x);
-/
+<<<<<<<
+
 #include <iostream>
 #include <vector>
 #define D(x) cout<<#x<<"="<<x<<endl;

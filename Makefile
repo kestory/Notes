@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "tiny change"
+	git commit -m ">>>>>>><<<<<<<"
 	git push
