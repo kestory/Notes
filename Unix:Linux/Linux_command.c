@@ -12,6 +12,14 @@ $ find . -name "._*"|xargs rm
 $ echo | gcc -E -xc -include 'stddef.h' - | grep size_t
 typedef long unsigned int size_t;
 
+zip --password 12345 crack_this.zip test.txt
+上面命令把test.txt文件压缩为crack_this.zip，并且设置密码12345
+穷举法：
+fcrackzip -b -c 'aA1!' -l 1-10 -u crack_this.zip//-b代表brute-force；-l限制密码长度；-c指定使用的字符集
+密码是数字，所以可以执行（加快破解速度）
+fcrackzip -b -c '1' -l 1-10 -u crack_this.zip
+密码由6位的小写字母组成，那么只要运行
+fcrackzip -c a -p aaaaaa sample.zip
 
 zip()&&unzip()
 zip命令可以用来将文件压缩成为常用的zip格式。unzip命令则用来解压缩zip文件。

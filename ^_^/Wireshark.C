@@ -13,7 +13,7 @@ IP过滤（如：ip.addr == x.x.x.x，ip.src == x.x.x.x, ip.dst == x.x.x.x）
 
 TCP抓包分析
 用 tcp.flags.syn == 1 过滤三次握手的包
-用 tcp.flags.fin == 1 过滤得四次断开的包 //TCP包中Info列标志位为[FIN,ACK]的包是TCP四次断开的包
+用 tcp.flags.fin == 1  过滤得四次断开的包 //TCP包中Info列标志位为[FIN,ACK]的包是TCP四次断开的包
 
 通过高亮显示颜色来推断出一个完整的会话//高亮显示三次握手和四次断开
 选好某帧	右击->对话着色(Colorize Conversation)->TCP->Color1
