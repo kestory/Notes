@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "fcrackzip"
+	git commit -m "tiny change"
 	git push
