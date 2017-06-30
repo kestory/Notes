@@ -5,11 +5,10 @@ man手册区段
 1	一般命令(General commands)
 2	系统调用(System calls)
 3	C库函数(C standard library)
-
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //终端以$开头，coderunner（CR）无开头，irb以>开头
+----------------------------
 ----------------------------
 $ ruby -e "p Time.now"
 p Time.now
@@ -69,3 +68,23 @@ puts STDERR.fileno
 2
 ----------------------------
 ----------------------------
+最大文件描述符编号
+p Process.getrlimit(:NOFILE)
+[4864, 9223372036854775807]
+[软限制，硬限制]
+--------------
+提高软限制
+Process.setrlimit(:NOFILE,4096)
+p Process.getrlimit(:NOFILE)
+[4096, 4096]
+--------------
+# The maximum number of simultaneous processes最大并发进程数
+# The largest size file that may be created
+# The maximum size of the stack segment of the process
+
+p Process.getrlimit(:NPROC)
+p Process.getrlimit(:FSIZE)
+p Process.getrlimit(:STACK)
+[709, 1064]
+[9223372036854775807, 9223372036854775807]
+[8388608, 67104768]
