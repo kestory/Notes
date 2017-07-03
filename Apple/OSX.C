@@ -1,16 +1,26 @@
 Homebrew
-搜索软件：brew search 软件名，如brew search wget
-安装软件：brew install 软件名，如brew install wget
-卸载软件：brew remove 软件名，如brew remove wget
-查看信息：brew info 软件名，如brew info wget
-brew list   —列出已安装的软件
-brew update	更新Homebrew
-brew home *	用浏览器打开
-brew info *	显示软件信息
-brew deps *	显示包依赖
-brew server *	启动web服务器，可以通过浏览器访问http://localhost:4567/ 来同网页来管理包
-brew -h 	帮助
+//以wget为例
+命令			摘要
+brew search wget	搜索名称包含wget的库(软件)
+brew install wget	安装wget
+brew uninstall wget	卸载wget
+brew info wget		显示wget相关信息
+brew deps wget	显示wget这个工具所依赖的其他库
+brew upgrade wget	更新wget(更新时旧版本的安装包依旧会保存在你的电脑上)
 
+brew list   		列出所有已安装的软件
+brew list --versions 	列出所有已经安装的内容，包括版本号
+brew home 		打开homebrew官网
+brew update		更新Homebrew
+brew home *		用浏览器打开
+brew info *		显示软件信息
+brew deps *		显示包依赖
+brew server *		启动web服务器，可以通过浏览器访问http://localhost:4567/ 来同网页来管理包
+brew -h 		帮助
+brew outdated 		检查是否有软件包需要更新
+brew cleanup 		清除旧版本缓存
+~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 "MacTips"
 调整 Launchpad 布局
 defaults write com.apple.dock springboard-columns -int 5;
