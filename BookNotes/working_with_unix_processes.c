@@ -5,16 +5,16 @@ man手册区段
 1	一般命令(General commands)
 2	系统调用(System calls)
 3	C库函数(C standard library)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~
 //终端以$开头，coderunner（CR）无开头，irb以>开头
-----------------------------
-----------------------------
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
 $ ruby -e "p Time.now"
 > p Time.now
 2017-06-30 10:02:46 +0800
-----------------------------
-----------------------------
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
 pid是每个进程的唯一 进程标示符(process identifier)
 ppid是其 父进程 的标识符
 > puts Process.pid
@@ -37,8 +37,8 @@ irb保持会话的同时
 ~ » ps -p 756
   PID TTY           TIME CMD
   756 ??         0:25.26 /Applications/CodeRunner.app/Contents/MacOS/
-----------------------------
-----------------------------
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
 Unix中，万物皆文件
 
 passwd = File.open('/etc/passwd')
@@ -63,8 +63,8 @@ puts STDERR.fileno
 0
 1
 2
-----------------------------
-----------------------------
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
 最大文件描述符编号
 p Process.getrlimit(:NOFILE)
 [4864, 9223372036854775807]
@@ -83,8 +83,8 @@ p Process.getrlimit(:STACK)	//The maximum size of the stack segment of the proce
 [709, 1064]
 [9223372036854775807, 9223372036854775807]
 [8388608, 67104768]
-----------------------------
-----------------------------
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
 环境变量 (environment variables) 在进程间共享
 env命令显示所有的环境变量
 set命令显示所有本地定义的Shell变量
@@ -98,8 +98,9 @@ wing it
 > system "echo $MESSAGE"
 wing it
 => true
-----------------------------
-----------------------------
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
+argv -> argument vector
 新建argv.rb文件中写上
 p ARGV
 puts ARGV.include?('--help')#用户请求帮助了吗
@@ -109,3 +110,38 @@ $ ruby argv.rb xu zi qian --help -c 2
 ["xu", "zi", "qian", "--help", "-c", "2"]
 true
 2
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
+进程命名
+$PROGRAM_NAME可以获取当前进程的名称
+--------------
+puts $PROGRAM_NAME
+at_exit {p 'Bye-Bye'}
+3.downto(1) do |num|
+	$PROGRAM_NAME="Process: #{num}"
+	puts $PROGRAM_NAME
+end
+//CR中
+Untitled.rb
+Process: 3
+Process: 2
+Process: 1
+"Bye-Bye"
+irb中end之后运行，运行完p Process.pid看下pid然后
+ps -p 4456
+  PID TTY           TIME CMD
+ 4456 ttys000    0:00.14 Process: 1
+可以看到 进程的名称 变化了
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
+退出码(Exit Codes) 0-255 惯例  0 是顺利结束，其它退出码代表各种错误
+exit 就是 exit 0
+可以定制退出码：exit 22
+会调用 at_exit 语句块
+exit! 退出码是1，不掉用 at_exit 语句块
+abort
+abort "sth went wrong"
+会打印消息到STDERR也会调用 at_exit 语句块
+raise 'lala' 不立即结束进程，而是抛出异常
+
+
