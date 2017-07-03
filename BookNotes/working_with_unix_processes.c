@@ -103,7 +103,7 @@ wing it
 新建argv.rb文件中写上
 p ARGV
 puts ARGV.include?('--help')#用户请求帮助了吗
-puts ARGV.include ? ('-c')&&ARGV[ARGV.include('-c') + 1]#获取 -c 选项的值
+puts ARGV.include?('-c')&&ARGV[ARGV.index('-c') + 1]#获取 -c 选项的值
 --------------
 $ ruby argv.rb xu zi qian --help -c 2
 ["xu", "zi", "qian", "--help", "-c", "2"]
