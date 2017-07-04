@@ -7,7 +7,7 @@ man手册区段
 3	C库函数(C standard library)
 ~~~~~~~~~~~~~~
 ~~~~~~~~~~~~~~
-//终端以$开头，coderunner（CR）无开头，irb以>开头
+#终端以$开头，coderunner（CR）无开头，irb以>开头
 <<<<<<<>>>>>>>
 <<<<<<<>>>>>>>
 $ ruby -e "p Time.now"
@@ -69,17 +69,17 @@ puts STDERR.fileno
 p Process.getrlimit(:NOFILE)
 [4864, 9223372036854775807]
 [软限制，硬限制]
-//> puts Process::RLIM_INFINITY
-//9223372036854775807
+#> puts Process::RLIM_INFINITY
+#9223372036854775807
 --------------
 提高软限制
 Process.setrlimit(:NOFILE,4096)
 p Process.getrlimit(:NOFILE)
 [4096, 4096]
 --------------
-p Process.getrlimit(:NPROC)	//The maximum number of simultaneous processes最大并发进程数
-p Process.getrlimit(:FSIZE)	//The largest size file that may be created
-p Process.getrlimit(:STACK)	//The maximum size of the stack segment of the process
+p Process.getrlimit(:NPROC)	#The maximum number of simultaneous processes最大并发进程数
+p Process.getrlimit(:FSIZE)	#The largest size file that may be created
+p Process.getrlimit(:STACK)	#The maximum size of the stack segment of the process
 [709, 1064]
 [9223372036854775807, 9223372036854775807]
 [8388608, 67104768]
@@ -121,7 +121,7 @@ at_exit {p 'Bye-Bye'}
 	$PROGRAM_NAME="Process: #{num}"
 	puts $PROGRAM_NAME
 end
-//CR中
+#CR中
 Untitled.rb
 Process: 3
 Process: 2
@@ -143,5 +143,42 @@ abort
 abort "sth went wrong"
 会打印消息到STDERR也会调用 at_exit 语句块
 raise 'lala' 不立即结束进程，而是抛出异常
-
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
+衍生(fork)－－进程中以编程的方式创建新的进程
+子进程继承父进程所有内容，包括已打开文件描述符，有全新的 pid
+子进程可以随意更改其内存内容，而不会对父进程造成任何影响
+#fork后产生子进程，返回 nil，于是子进程执行else语句后退出，父进程继续运行
+puts "parent process pid is #{Process.pid}"
+if fork
+  puts "entered the if block from #{Process.pid}"
+else
+  puts "entered the else block from #{Process.pid}"
+end
+parent process pid is 5978
+entered the if block from 5978
+entered the else block from 5981
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
+父进程结束后，子进程安然无恙，不会同归于尽
+#irb中
+fork do
+  5.times do
+  sleep 1
+  puts "I'm an orphan!"
+  end
+end
+abort "Parent process died..."
+#退出irb，回到终端命令提示符
+I'm an orphan!
+I'm an orphan!
+I'm an orphan!
+I'm an orphan!
+I'm an orphan!
+#回车后'
+Parent process died...
+至于为什么，因为abort退出父进程了，子进程变成孤儿进程
+如果不写abort，最开头输出的pid是 irb 的pid+1，可见的确是子进程
+<<<<<<<>>>>>>>
+<<<<<<<>>>>>>>
 
