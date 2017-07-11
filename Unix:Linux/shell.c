@@ -4,8 +4,6 @@
 cd Punlic/Drop\ Box/
 cd "Public/Drop Box"
 
-abcdefghijklmnopqrstuvwxyz()
-
 file 根据文件的内容输出文件类型
 >~ file Desktop
 Desktop: directory

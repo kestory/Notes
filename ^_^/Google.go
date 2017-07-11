@@ -1,5 +1,7 @@
 https://www.zhihu.com/question/20161362
 https://sspai.com/post/34150
+//如果不喜欢用谷歌香港，可以以 https://www.google.com/ncr 方式访问，(No Country Redirect)禁止国别跳转。
+//新一代的搜索引擎，能根据问题直接给出答案的网站：wolfram alpha
 双引号 完全匹配搜索
 减号 减号前面必须是空格，减号后面紧跟着需要排除的词
 	南京大学 -研究生
@@ -45,6 +47,3 @@ author:green photosynthesis
 define:happy
 1/7*(5-4)+8
 100pounds=?kg
-
-
-

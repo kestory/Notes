@@ -20,7 +20,8 @@ brew -h 		帮助
 brew outdated 		检查是否有软件包需要更新
 brew cleanup 		清除旧版本缓存
 ~~~~~~~~~~~~~~
-~~~~~~~~~~~~~~
+sw_vers 获取 OS X 的版本信息
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "MacTips"
 调整 Launchpad 布局
 defaults write com.apple.dock springboard-columns -int 5;
