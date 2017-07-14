@@ -10,21 +10,24 @@ int n[] = {1, 2, 3, 4, 5};
 vector<int> a(n, n + 5);           		//将数组n的前5个元素作为向量a的初值
 vector<int> a(&n[1], &n[4]);		//将n[1] - n[4]范围内的元素作为向量a的初值
 
-int max = *max_element(v.begin(), v.end());
-
-myvector.push_back (myint);//Adds a new element at the end of the vector
-myvector.pop_back();//Parameters & Return value are both none
-myvector.size();//the number of elements, which is the number of actual objects held in the vector
-myvector.capacity();//The size of the currently allocated storage capacity in the vector
-myvector.insert(iterator position, size_type n, const value_type& val);
-myvector.max_size()//A pretty large number
-myvector.empty()//whether the vector is empty
-
-
+---------------------------------------------------------------
+访问方式
 for (int i = 0; i < myvector.size(); i++)
 	cout << ' ' << myvector[i];
 for(vector<T>::iterator it=myvector.begin();it!=myvector.end();it++)
 	cout<<*it<<" ";
+
+---------------------------------------------------------------
+int max = *max_element(v.begin(), v.end());
+
+v.push_back (myint);//Adds a new element at the end of the vector
+v.pop_back();//Parameters & Return value are both none
+v.size();//the number of elements, which is the number of actual objects held in the vector
+v.capacity();//The size of the currently allocated storage capacity in the vector
+v.insert()//插入一个或多个元素至 vector 内的任意位置。
+v.erase()//删除 vector 中一个或多个元素。
+v.max_size()//A pretty large number
+v.empty()//whether the vector is empty
 
 ------------Lambda-------------
 #include <iostream>
@@ -51,7 +54,7 @@ int main ()
 
 	return 0;
 }
------------------------------------
+--------------
 myints.size()=0
 
 myints.size()=10
