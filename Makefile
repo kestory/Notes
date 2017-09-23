@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "clipping +"
+	git commit -m "tiny"
 	git push

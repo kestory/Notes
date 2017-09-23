@@ -1,5 +1,4 @@
 Homebrew
-//以wget为例
 命令			摘要
 brew search wget	搜索名称包含wget的库(软件)
 brew install wget	安装wget
@@ -19,8 +18,12 @@ brew server *		启动web服务器，可以通过浏览器访问http://localhost:
 brew -h 		帮助
 brew outdated 		检查是否有软件包需要更新
 brew cleanup 		清除旧版本缓存
-~~~~~~~~~~~~~~
-sw_vers 获取 OS X 的版本信息
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Oh My ZSH
+查看系统的shell
+     cat /etc/shells
+查看正在用的shell
+     echo $SHELL
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 "MacTips"
 调整 Launchpad 布局
@@ -37,3 +40,5 @@ Safari 浏览到网页想发给别人，直接command + i就会打开邮件并�
 系统软件输入英文时按esc键(或者 fn + f5 )会显示可能单词
 
 想改截图默认的 png 到 jpeg：defaults write com.apple.screencapture type -string JPEG
+
+sw_vers 获取 OS X 的版本信息
