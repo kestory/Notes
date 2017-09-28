@@ -42,3 +42,5 @@ Safari 浏览到网页想发给别人，直接command + i就会打开邮件并�
 想改截图默认的 png 到 jpeg：defaults write com.apple.screencapture type -string JPEG
 
 sw_vers 获取 OS X 的版本信息
+
+screencapture 截屏
