@@ -44,3 +44,9 @@ Safari 浏览到网页想发给别人，直接command + i就会打开邮件并�
 sw_vers 获取 OS X 的版本信息
 
 screencapture 截屏
+
+Xcode
+New Project -> OS X -> Appliciation -> Command Line Tool
+
+Spotlight
+搜索后按command可显示路径
