@@ -1,8 +1,6 @@
 cat /etc/os-release 这是 Linux 常用的查看当前系统版本的命令
 cat /proc/version 查看当前系统的版本信息
 uname -r 命令查看当前的内核版本
-命令的选项常有两种模式，例如 --version 和 -v 等价
-/bin	这个目录保存必须在任何时候都可以访问的二进制代码，以及一般用户经常运行的程序。
 df -ah	//-a 显示目录和文件 -h "Human-readable" output BKMGT
 source ~/.zshrc相当于重启终端，就是把新配置读入
 

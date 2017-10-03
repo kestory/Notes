@@ -12,3 +12,21 @@
 ⌘ + ⌥ + e：全屏展示所有的 tab，且可以搜索
 
 ⌃ + l：清屏
+
+终端常用的快捷键：
+ctrl+shift+c: 复制
+ctrl+shift+v: 粘贴
+
+Ctrl + w        向左删一个单词
+
+Ctrl + u        删除光标之前到行首的字符
+Ctrl + k        删除光标之前到行尾的字符
+Ctrl + c        取消当前行输入的命令
+
+Ctrl + a        光标移动到行首（Ahead of line）
+Ctrl + e        光标移动到行尾（End of line）
+
+Ctrl + l        清屏（相当于 clear 命令）
+
+Ctrl + r        显示：号提示，根据用户输入查找相关历史命令（reverse-i-search）
+Alt  + .         粘帖最后一次命令最后的参数（通常用于mkdir xx 后, cd配合着alt+.）
