@@ -8,7 +8,8 @@ Desktop: directory
 >kk file main.c
 main.c: ASCII c program text
 
-which/type 定位某个命令的文件路径
+which 定位某个命令的文件路径
+type    得知命令类型
 >which ls docker pip xx
 ls: aliased to ls -G
 /usr/local/bin/docker

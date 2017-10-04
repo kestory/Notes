@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "github fork后想同步到最新"
+	git commit -m "Linux Pocket Guide 15-28"
 	git push
