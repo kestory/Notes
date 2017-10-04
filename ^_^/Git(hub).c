@@ -56,6 +56,16 @@ git remote rename hi hello
 关联后，使用命令git push -u <name> master第一次推送master分支的所有内容，以后git push 即可
 以后git push <name> master推送最新修改
 
+fork后想同步到最新
+配置remote指向上游仓库
+	git remote add upstream https://github.com/gzc/CLRS.git
+从上游仓库获取到分支，及相关的提交信息，它们将被保存在本地的 upstream/master 分支
+	git fetch upstream
+切换到本地的 master 分支
+	git checkout master
+把 upstream/master 分支合并到本地的 master 分支
+	git merge upstream/master
+	git push
 
 ---------------------------------------------------
 		简易方式
