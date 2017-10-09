@@ -29,4 +29,5 @@ Ctrl + e        光标移动到行尾（End of line）
 Ctrl + l        清屏（相当于 clear 命令）
 
 Ctrl + r        显示：号提示，根据用户输入查找相关历史命令（reverse-i-search）
-Alt  + .         粘帖最后一次命令最后的参数（通常用于mkdir xx 后, cd配合着alt+.）
+Alt  + .         粘帖最后一次命令最后的参数（通常用于mkdir xx 后, cd配合着alt+.）//可以连续使用，用一次的话相当于 !$
+
