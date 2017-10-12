@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "Linux网络管理"
+	git commit -m "CTF Wargame 00-03"
 	git push
