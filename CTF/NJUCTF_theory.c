@@ -14,8 +14,31 @@ env命令常出现在脚本文件的第一行
 #!/usr/bin/env python
 不管python在哪个目录中，只要目录列在PATH环境变量中，就可以被找到
 
+
 .d 是 directory 的缩写，表示这是一个目录（文件夹）。这个在配置文件中比较常见。
 一般如果有一系列格式相同的，目的一致的配置文件，就把它们放在一个以.d结尾的文件夹中。
 例如 init.d 中存放的就是一系列系统服务的管理（启动与停止）脚本。
 
+
 crontab 周期性地运行任务
+
+
+tmpfs是Linux/Unix系统上的一种基于内存的文件系统
+有如下2个优势
+1. 动态文件系统的大小
+2. 闪电般的速度
+但重新启动之后不会保留
+/dev/shm/是一个设备文件，它使用就是tmpfs文件系统
+应用场景
+%mkdir  /dev/shm/tmp
+%chmod  1777  /dev/shm/tmp         //注意权限
+%mount --bind  /dev/shm/tmp  /tmp
+%ls -ld /tmp
+drwxrwxrwt 2 root root 40 May 29 21:46 /tmp
+
+
+CGI 通用网关接口（Common Gateway Interface）
+文件描述符:0(stdin)1(stdout)2(stderr)
+1>&2 意思是把标准输出重定向到标准错误
+2>&1 意思是把标准错误输出重定向到标准输出
+&>filename 意思是把stout和stderr都重定向到文件filename中

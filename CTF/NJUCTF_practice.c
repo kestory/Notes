@@ -16,6 +16,24 @@ chmod 777 file
 链接
 ln -s /bin/getflag01 /tmp/echo
 
+echo -e enable interpretation of backslash escapes
+% by="123\n321"
+% echo $by
+123\n321
+% echo -e $by
+123
+321
+
+${parameter,,}//把parameter展开成小写
+https://billie66.github.io/TLCL/book/zh/chap35.html
+% by=HELLO
+% echo $by
+HELLO
+% echo ${by,,}
+hello
+% echo $by
+HELLO
+
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

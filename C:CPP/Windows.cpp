@@ -106,3 +106,8 @@ void Sleep(DWORD dwMilliseconds);  参数为毫秒
 #include <unistd.h>
 unsigned int sleep(unsigned int seconds);参数为毫秒 （如果需要更精确可以用usleep，单位为微秒）
 =======
+Windows API编程//new project -> win32 project
+case WM_LBUTTONDOWN:
+	MessageBox(hWnd, _T("I'm Saying\nMu ha ha"), _T("Caption"), MB_ICONEXCLAMATION | MB_YESNOCANCEL | MB_DEFBUTTON2);
+	//一个惊叹号 | 三个选项 | 默认放在第二个选项
+break;

@@ -20,13 +20,13 @@ length: 11
 capacity: 15
 max_size: 4294967291
 --------------------------------------
--------string_to_int
+//string2int
 string s = "123";
 int i = stoi(s);
--------int_to_string
+//int2string
 int a;
 string s = to_string(a);
--------string_to_char*
+//string2char*
 char * cstr = new char [str.length()+1];
 strcpy (cstr, str.c_str());
 --------------------------------------
