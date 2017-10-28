@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "CTF Wargame 16"
+	git commit -m "CTF Wargame 5 6"
 	git push
