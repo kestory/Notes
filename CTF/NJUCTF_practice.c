@@ -35,6 +35,22 @@ hello
 HELLO
 
 
+python输出重复字符串
+print('ab'*4)
+在命令中直接执行python代码
+python -c cmd
+python -c "print('ab'*4)" | ./flag20
+
+
+[~]$ sort
+123
+321
+111//control + d
+111
+123
+321
+[~]$ wc < /etc/passwd
+      96     265    5925
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Shodan

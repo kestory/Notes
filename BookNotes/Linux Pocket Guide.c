@@ -27,6 +27,8 @@ mycommand >> outfile		//附加到outfile末端
 mycommand 2> outfile			//改变stderr输出目的地，2>> 同上，2是stderr的文件句柄 file handle
 mycommand > outfile 2> errorfile	//导入不同文件
 mycommand > outfile 2> &1		//导入同一文件
+command < file1 >file2
+command 命令将 stdin 重定向到 file1，将 stdout 重定向到 file2
 ***
 组合命令
 cmd1;cmd2;cmd3		//都会运行
