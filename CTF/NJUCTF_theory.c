@@ -46,4 +46,5 @@ CGI 通用网关接口（Common Gateway Interface）
 /etc/passwd
 username:password:User ID:Group ID:comment:home directory:shell
 
-
+ egrep=grep -E
+ egrep只支持扩展的正则表达式，不支持基本正则表达式
