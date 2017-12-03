@@ -8,4 +8,20 @@ ForwardIt remove_if( ForwardIt first, ForwardIt last, UnaryPredicate p );
 str1.erase(remove(str1.begin(), str1.end(), ' '), str1.end());
 str2.erase(remove_if(str2.begin(), str2.end(), [](unsigned char x) {return isspace(x);}),
 
-
+Heap using STL C++
+int myints[] = {20, 30, 40, 25, 15};
+vector<int> v1(myints, myints + 5);
+make_heap(v1.begin(), v1.end());
+cout<<"MAX is "<<v1.front() << endl;
+v1.push_back(50);
+push_heap(v1.begin(), v1.end());
+cout<<"MAX is "<<v1.front() << endl;
+pop_heap(v1.begin(), v1.end());
+cout<<"MAX is "<<v1.front() << endl;
+for (int &x : v1)
+	cout << x << " ";
+cout << endl;
+sort_heap(v1.begin(), v1.end());//After this operation, the container is no longer a heap.
+for (int &x : v1)
+	cout << x << " ";
+cout << endl;
