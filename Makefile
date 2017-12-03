@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "南京大学第一届校内CTF比赛"
+	git commit -m "begin()与end()&&front()与back()"
 	git push

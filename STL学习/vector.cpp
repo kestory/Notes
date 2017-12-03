@@ -93,3 +93,11 @@ int main(int argc, char *argv[]) {
 	D(vecInt.capacity())	//j=0
 	D(vecInt.size())		//i=0
 }
+
+---------------------------------------------------------------
+begin()与end()//返回迭代器
+front()与back()//返回引用
+cout << v1.front() << endl;
+cout << v1.back() << endl;
+cout << *v1.begin() << endl;
+cout << *(v1.end() - 1) << endl;//v1.end()指向的是最后一个元素的下一个位置
