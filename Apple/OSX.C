@@ -50,3 +50,5 @@ New Project -> OS X -> Appliciation -> Command Line Tool
 
 Spotlight
 搜索后按command可显示路径
+
+Preview 用""可以精确搜索
