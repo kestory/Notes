@@ -25,6 +25,37 @@ rsa2.py需python2的libnum中的n2s
 
 [在线凯撒](http://tools.matchzones.net/caesar_cipher)一下就看到了
 
+
+##Web
+
+`Easyweb`  
+显示源代码后拉到最下面  
+![](./repo/Easyweb.png)  
+
+
+`最好的语言`  
+检查元素 -> source  
+![](./repo/最好的语言.png)  
+`php才是最好的语言`  
+
+```
+please input a <?php
+include 'flag.php';
+$md51 = md5('QNKCDZO');
+$a = @$_GET['a'];
+$md52 = @md5($a);
+if(isset($a)){
+if ($a != 'QNKCDZO' && $md51 == $md52) {
+    echo $flag;
+} else {
+    echo "false!!!";
+}}
+else{echo "please input a";}
+highlight_file(__FILE__);
+?>
+```
+搜一下`QNKCDZO`
+
 ***
 2017.12.2 南京大学仙林校区实验楼乙126机房
 ***
