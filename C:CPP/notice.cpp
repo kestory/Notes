@@ -41,3 +41,14 @@ printf后不要加&
 
 9.class 中直接写函数哪怕只有一行也要 {}
 10.for里面新定义的变量在外面也是不能用的
+
+11.memset"出错"
+int a[1024];
+memset(a, 1, sizeof(int));//16843009=0x01010101
+memset(a, 2, sizeof(int));//33686018=0x02020202
+menset initialized every "byte"
+所以可以初始化 32 位的 int 数组0（碰巧）
+字符是 8 位 1 byte
+
+
+
