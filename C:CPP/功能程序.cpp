@@ -105,10 +105,10 @@ int Gcd(int a, int b) {
 char str[255];
 int numbers = 1234;
 sprintf(str, "%d", numbers);
-~~~~~~~~~~~~~~~~~~~~~~~~~~atoi()~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~字符串变成数字(atoi)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #include <cstdlib>
 char str[255] = "-4321.123";
-int numbers = atoi(str);//numbers ==4321
+int numbers = atoi(str);//numbers == -4321//读到最后一个非[-,0-9]
 ~~~~~~~~~~~~~~~~~~~~~~~~~~quickSort()~~~~~~~~~~~~~~~~~~~~~~~~~
 / takes the first element as pivot
 
