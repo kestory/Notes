@@ -75,17 +75,23 @@ git help status
 ------------
 |  remote  |
 ------------
+git remote
+//列出所有远程主机
 git remote -v
-列出所有远程仓库信息, 包括网址.
-git remote rm origin//删除名字叫origin的远程库
-进入.git文件夹cat config可以看到有哪些远程库
+//列出所有远程的网址
+git remote add <主机名> <网址>
+git remote add <name> git@github.com:kestory/Notes.git 	//注意有冒号":" <name>是远程库名字
+//关联一个远程库
+git remote rm <主机名>
+git remote rm origin
+//删除名字叫origin的远程库
+git remote rename <原主机名> <新主机名>
 git remote rename hi hello
-重命名本地远程仓库名, 从hi改为hello
+//重命名本地远程仓库名, 从hi改为hello
+进入.git文件夹cat config可以看到有哪些远程库
 
-关联一个远程库git remote add <name> git@github.com:kestory/Notes.git 	//注意有冒号":" <name>是远程库名字
-关联后，使用命令git push -u <name> master第一次推送master分支的所有内容，以后git push 即可
-以后git push <name> master推送最新修改
-
+关联后，使用命令git push -u <name> master第一次推送master分支的所有内容（-u选项指定一个默认主机）
+以后git push 即可
 
 ---------------------------------------------------
 		problem-solving
