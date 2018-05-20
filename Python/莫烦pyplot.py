@@ -11,6 +11,9 @@ plt.plot(x, y1)
 plt.plot(x, y2, color='red', linewidth=10.0, linestyle='--')
 plt.show()
 
+# 设置坐标轴名称
+plt.xlabel("Data sets", fontsize=13, fontweight='bold')
+plt.ylabel("幅度", fontproperties='SimHei')  # 可以直接显示中文。
 
 plt.xlim((-1, 2))
 plt.ylim((-2, 3))
