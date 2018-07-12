@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "rm Old_Matlab_in_MCM/ICM"
+	git commit -m "learn etc/passwd&&shadow because Hadoop"
 	git push
