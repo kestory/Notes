@@ -40,3 +40,6 @@ mkdir
 
 ps aux | grep ssh
 查找进程
+
+readlink -f
+立刻找出链接文件的最后一环（用不着连续使用ls -l
