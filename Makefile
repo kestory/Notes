@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "ssssssshell"
+	git commit -m "really?"
 	git push
