@@ -86,15 +86,17 @@ int main( int argc, char *argv[] ) {
 
 #include <cstring>//strtok
 #include <iostream>
+using namespace std;
 int main()
 {
 	char input[100] = "A bird came down the walk";
-	char *token = std::strtok(input, " ");
+	char *token = strtok(input, " ");
 	while (token != NULL) {
-		std::cout << token << '\n';
-		token = std::strtok(NULL, " ");
+		cout << token << '\n';
+		token = strtok(NULL, " ");
 	}
 }
+
 ------------------------------------------------------------------------------------
 A
 bird
@@ -103,6 +105,27 @@ down
 the
 walk
 ------------------------------------------------------------------------------------
+用STL进行字符串的分割
+涉及到string类的两个函数find和substr
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+#define D(x) cout<<#x<<"="<<x<<endl;
 
+int main() {
+	string str = "I am a student.";
+	str += " ";
+	vector<string> token;
+	int len = str.size();
+	for (int i = 0; i < len; ++i)
+	{
+		int pos = str.find(" ", i); //在 str[i]~end范围查找
+		string s = str.substr(i, pos - i);
+		token.push_back(s);
+		i = pos; //for循环会每次++
+	}
+	for (int i = 0; i < token.size(); i++)
+		D(token[i])
 
-
+}
