@@ -95,4 +95,8 @@ myst st = { 1 ,2, {4}};
 memset(&st, 0, sizeof (st));
 bzero(&set, sizeof (st));
 ---------------------------------------------------------------------------------------------- -
-
+用异或进行两个数交换的陷阱
+#define exchange(a,b)     (a=a^b,b=a^b,a=a^b)
+exchange(a, a);
+当两个数一样时会变为0
+可以用<algorithm>的swap()函数
