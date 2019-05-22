@@ -37,3 +37,8 @@ vector<int> v(n, n + 5);
 reverse(v.begin(), v.end());
 for (int &x : v)
 	cout << x << " ";
+
+------- fill -------
+// 将一个区间的元素都赋予val值
+fill(d.begin(), d.end(), INF); //初始化最全部为INF
+fill(v.begin() + 3, v.end() - 2, 8);
