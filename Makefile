@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "数据结构第六章上机"
+	git commit -m "案例作业"
 	git push
