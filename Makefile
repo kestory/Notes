@@ -1,5 +1,5 @@
 git:
 	git add .
 	git status
-	git commit -m "1713469_许龄予_期末考试"
+	git commit -m "2048"
 	git push
